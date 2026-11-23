@@ -1,0 +1,337 @@
+{
+  "orders": 49222,
+  "completed": 45276,
+  "sales": 3162844.0,
+  "customers": 9782,
+  "start": "2024-01-01",
+  "end": "2026-06-30",
+  "categories": [
+    {
+      "name": "Electronics",
+      "orders": 16358,
+      "sales": 1601541.0
+    },
+    {
+      "name": "Accessories",
+      "orders": 16713,
+      "sales": 509812.0
+    },
+    {
+      "name": "Home Office",
+      "orders": 2885,
+      "sales": 410594.0
+    },
+    {
+      "name": "Wearables",
+      "orders": 2819,
+      "sales": 398105.0
+    },
+    {
+      "name": "Gaming",
+      "orders": 1526,
+      "sales": 181369.0
+    },
+    {
+      "name": "Stationery",
+      "orders": 4975,
+      "sales": 61423.0
+    }
+  ],
+  "products": [
+    {
+      "name": "Headphones",
+      "orders": 2379,
+      "sales": 310393.0
+    },
+    {
+      "name": "Office Chair",
+      "orders": 958,
+      "sales": 303192.0
+    },
+    {
+      "name": "Tablet",
+      "orders": 591,
+      "sales": 260650.0
+    },
+    {
+      "name": "Smart Watch",
+      "orders": 1144,
+      "sales": 238716.0
+    },
+    {
+      "name": "Microphone",
+      "orders": 1426,
+      "sales": 212839.0
+    },
+    {
+      "name": "Mechanical Keyboard",
+      "orders": 1947,
+      "sales": 205693.0
+    },
+    {
+      "name": "Bluetooth Speaker",
+      "orders": 1954,
+      "sales": 194994.0
+    },
+    {
+      "name": "Gaming Controller",
+      "orders": 1526,
+      "sales": 181369.0
+    },
+    {
+      "name": "Power Bank",
+      "orders": 2744,
+      "sales": 165521.0
+    },
+    {
+      "name": "Fitness Band",
+      "orders": 1675,
+      "sales": 159389.0
+    },
+    {
+      "name": "Backpack",
+      "orders": 2121,
+      "sales": 157146.0
+    },
+    {
+      "name": "Webcam",
+      "orders": 1657,
+      "sales": 138136.0
+    },
+    {
+      "name": "Phone Case",
+      "orders": 4579,
+      "sales": 113623.0
+    },
+    {
+      "name": "Desk Lamp",
+      "orders": 1927,
+      "sales": 107402.0
+    },
+    {
+      "name": "Laptop Stand",
+      "orders": 2104,
+      "sales": 101026.0
+    },
+    {
+      "name": "Wireless Mouse",
+      "orders": 2946,
+      "sales": 92925.0
+    },
+    {
+      "name": "HDMI Cable",
+      "orders": 3598,
+      "sales": 69766.0
+    },
+    {
+      "name": "USB-C Cable",
+      "orders": 4311,
+      "sales": 68251.0
+    },
+    {
+      "name": "Notebook",
+      "orders": 4975,
+      "sales": 61423.0
+    },
+    {
+      "name": "Monitor",
+      "orders": 714,
+      "sales": 20390.0
+    }
+  ],
+  "cities": [
+    {
+      "name": "Tehran",
+      "orders": 12824,
+      "sales": 879547.0
+    },
+    {
+      "name": "Mashhad",
+      "orders": 5720,
+      "sales": 404076.0
+    },
+    {
+      "name": "Karaj",
+      "orders": 4553,
+      "sales": 320831.0
+    },
+    {
+      "name": "Isfahan",
+      "orders": 4545,
+      "sales": 308714.0
+    },
+    {
+      "name": "Shiraz",
+      "orders": 4042,
+      "sales": 289389.0
+    },
+    {
+      "name": "Tabriz",
+      "orders": 3800,
+      "sales": 269981.0
+    },
+    {
+      "name": "Ahvaz",
+      "orders": 2673,
+      "sales": 192219.0
+    },
+    {
+      "name": "Rasht",
+      "orders": 2629,
+      "sales": 185774.0
+    },
+    {
+      "name": "Kerman",
+      "orders": 2299,
+      "sales": 162376.0
+    },
+    {
+      "name": "Qom",
+      "orders": 2191,
+      "sales": 149937.0
+    }
+  ],
+  "monthly": [
+    {
+      "name": "2024-01",
+      "sales": 113073.0
+    },
+    {
+      "name": "2024-02",
+      "sales": 103464.0
+    },
+    {
+      "name": "2024-03",
+      "sales": 119603.0
+    },
+    {
+      "name": "2024-04",
+      "sales": 107187.0
+    },
+    {
+      "name": "2024-05",
+      "sales": 113446.0
+    },
+    {
+      "name": "2024-06",
+      "sales": 108643.0
+    },
+    {
+      "name": "2024-07",
+      "sales": 118815.0
+    },
+    {
+      "name": "2024-08",
+      "sales": 115380.0
+    },
+    {
+      "name": "2024-09",
+      "sales": 106220.0
+    },
+    {
+      "name": "2024-10",
+      "sales": 110467.0
+    },
+    {
+      "name": "2024-11",
+      "sales": 110646.0
+    },
+    {
+      "name": "2024-12",
+      "sales": 114152.0
+    },
+    {
+      "name": "2025-01",
+      "sales": 109177.0
+    },
+    {
+      "name": "2025-02",
+      "sales": 101755.0
+    },
+    {
+      "name": "2025-03",
+      "sales": 109492.0
+    },
+    {
+      "name": "2025-04",
+      "sales": 106546.0
+    },
+    {
+      "name": "2025-05",
+      "sales": 118661.0
+    },
+    {
+      "name": "2025-06",
+      "sales": 115062.0
+    },
+    {
+      "name": "2025-07",
+      "sales": 110211.0
+    },
+    {
+      "name": "2025-08",
+      "sales": 111887.0
+    },
+    {
+      "name": "2025-09",
+      "sales": 110505.0
+    },
+    {
+      "name": "2025-10",
+      "sales": 113449.0
+    },
+    {
+      "name": "2025-11",
+      "sales": 117635.0
+    },
+    {
+      "name": "2025-12",
+      "sales": 104696.0
+    },
+    {
+      "name": "2026-01",
+      "sales": 116964.0
+    },
+    {
+      "name": "2026-02",
+      "sales": 68351.0
+    },
+    {
+      "name": "2026-03",
+      "sales": 75479.0
+    },
+    {
+      "name": "2026-04",
+      "sales": 79328.0
+    },
+    {
+      "name": "2026-05",
+      "sales": 79920.0
+    },
+    {
+      "name": "2026-06",
+      "sales": 72630.0
+    }
+  ],
+  "status": {
+    "Completed": 45276,
+    "Returned": 1508,
+    "Cancelled": 2438
+  },
+  "segments": [
+    {
+      "name": "Longer since last purchase",
+      "customers": 5491,
+      "sales": 1010597.0,
+      "share": 31.942869316421827,
+      "customerShare": 56.13371498671028
+    },
+    {
+      "name": "Higher cumulative spend",
+      "customers": 4291,
+      "sales": 2153167.0,
+      "share": 68.05713068357817,
+      "customerShare": 43.86628501328971
+    }
+  ]
+}
