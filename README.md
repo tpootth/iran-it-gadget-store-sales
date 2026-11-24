@@ -8,11 +8,11 @@ An interactive business analytics portfolio presenting monthly sales trends, cat
 
 ## Explore
 
-- Monthly sales in source units or indexed to the first month
-- City rankings by sales or completed-order count
-- Category contribution and product leaders
-- Completed-order KPIs and all-order status mix
-- Customer segment profiles and proposed business experiments
+- Monthly trend (sales or index) with peak/low markers, plus a year × month heatmap
+- Category treemap and a volume-vs-basket-size bubble chart
+- A 20-product shelf, sortable by sales, orders or average order value
+- A city bubble map of Iran with a linked ranking
+- Order-outcome mix and two customer segments (share of customers vs share of value)
 
 ## Data and methods
 
@@ -28,7 +28,7 @@ This public repository contains aggregate dashboard data only. Row-level custome
 python3 -m http.server 8000 --directory dashboard
 ```
 
-Open http://localhost:8000. The dashboard uses native HTML, CSS, JavaScript and SVG, with no runtime third-party libraries or analytics trackers.
+Open http://localhost:8000. The dashboard uses native HTML, CSS, JavaScript and SVG, with no runtime third-party libraries or analytics trackers. Icons are from [Lucide](https://lucide.dev) (ISC licence) and the map outline is from [Natural Earth](https://www.naturalearthdata.com/) (public domain) via world-atlas; both are bundled in `dashboard/assets.js`.
 
 ## Deployment
 

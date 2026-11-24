@@ -1,8 +1,76 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Iran Gadget — Sales Observatory</title><link rel="stylesheet" href="style.css"></head>
-<body><header><a class="brand" href="#">IRAN GADGET <span>/ SALES OBSERVATORY</span></a><nav><a href="#overview">Overview</a><a href="#markets">Markets</a><a href="#customers">Customers</a><a href="https://github.com/tpootth/iran-it-gadget-store-sales">Source code</a></nav></header>
-<main><section class="hero"><div><p class="eyebrow">DATA SCIENCE / BUSINESS ANALYTICS</p><h1>A clearer view of<br><em>what sells.</em></h1><p class="intro">Explore the products, places and customer patterns behind an Iranian IT & gadget store.</p></div><aside><span class="live">COURSEWORK PORTFOLIO</span><p id="period">Loading dataset…</p><p>Completed-order sales · source currency unspecified</p><a href="#overview">Explore the analysis</a></aside></section>
-<section id="overview"><div class="section-head"><div><p class="eyebrow">THE COMMERCIAL PICTURE</p><h2>Sales at a glance</h2></div><p>Sales totals include completed orders only.<br>Other statuses remain visible in the order mix.</p></div><div class="metrics" id="metrics"></div><div class="panel wide"><div class="panel-head"><div><h3>Sales through time</h3><p>Monthly completed-order sales · source units</p></div><label>Measure <select id="trend-mode"><option value="sales">Sales value</option><option value="index">Index (first month = 100)</option></select></label></div><div id="trend" class="trend"></div></div></section>
-<section id="markets"><div class="section-head"><div><p class="eyebrow">WHERE VALUE CONCENTRATES</p><h2>Products & places</h2></div><p>Compare the mix, then inspect the leaders.</p></div><div class="grid"><article class="panel"><h3>Category contribution</h3><p>Share of completed sales</p><div id="categories"></div></article><article class="panel"><div class="panel-head"><div><h3>City leaderboard</h3><p>Top cities by selected measure</p></div><label>Rank by <select id="city-mode"><option value="sales">Sales value</option><option value="orders">Completed orders</option></select></label></div><div id="cities"></div></article><article class="panel"><h3>Product leaders</h3><p>Top eight products by completed sales</p><div id="products"></div></article><article class="panel"><h3>Order outcomes</h3><p>All source orders, including non-completed orders</p><div id="statuses"></div><div class="note" id="status-note"></div></article></div></section>
-<section id="customers"><div class="section-head"><div><p class="eyebrow">FROM ANALYSIS TO EXPERIMENT</p><h2>Two customer patterns</h2></div><p>Existing clustering output · descriptive segments</p></div><div id="segments" class="grid"></div><div class="method"><h3>How to read this work</h3><p>Sales use the source <code>Sales</code> field for completed orders. The currency and whether the dataset is real or synthetic are unconfirmed. Segment shares come from the existing clustering output; they describe that analysis cohort. Differences and promotion associations do not establish causality or profit.</p><a href="https://www.kaggle.com/datasets/erfan4524/e-commerce-sales-data-analysis-and-eda/data">View dataset source on Kaggle</a></div></section>
-<footer><span>IRAN GADGET / ANALYTICS PORTFOLIO</span><a href="https://github.com/tpootth/iran-it-gadget-store-sales/actions">Built & checked with GitHub Actions</a></footer></main><script src="app.js"></script></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Iran Gadget — Sales Observatory</title>
+<meta name="description" content="Interactive sales dashboard for an Iranian IT and gadget store: monthly trend, categories, products, cities and customer segments.">
+<meta name="theme-color" content="#f6f7f4">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23167369'/%3E%3Cpath d='M8 22V12m6 10V8m6 14v-7m6 7v-4' stroke='%23fff' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+<header class="top"><a class="brand" href="#">IRAN GADGET <span>/ SALES OBSERVATORY</span></a>
+  <nav><a href="#trend-sec">Trend</a><a href="#mix">Mix</a><a href="#products-sec">Products</a><a href="#map-sec">Cities</a><a href="#customers">Customers</a></nav></header>
+<main>
+  <section class="hero">
+    <div>
+      <p class="eyebrow">Business analytics portfolio</p>
+      <h1>What sells,<br><em>where, and to whom.</em></h1>
+      <p class="intro" id="period">Loading…</p>
+    </div>
+    <div class="mosaic" id="mosaic" aria-hidden="true"></div>
+  </section>
+
+  <div class="kpis" id="kpis"></div>
+
+  <section id="trend-sec">
+    <div class="head"><h2>Sales through time</h2>
+      <div class="seg" id="trend-mode"><button data-v="sales" aria-pressed="true">Sales</button><button data-v="index" aria-pressed="false">Index</button></div></div>
+    <div class="card"><div id="trend" class="chart"></div></div>
+    <div class="card heat-card"><div class="card-head"><h3>Month by month</h3><span class="legend-scale" id="heat-legend"></span></div><div id="heat"></div></div>
+  </section>
+
+  <section id="mix">
+    <div class="head"><h2>Category mix</h2><p>Share of completed sales</p></div>
+    <div class="two">
+      <div class="card"><div id="treemap" class="treemap"></div></div>
+      <div class="card"><div class="card-head"><h3>Volume vs basket size</h3><span class="muted">bubble = sales</span></div><div id="bubbles" class="chart"></div></div>
+    </div>
+  </section>
+
+  <section id="products-sec">
+    <div class="head"><h2>The product shelf</h2>
+      <div class="seg" id="prod-sort"><button data-v="sales" aria-pressed="true">Sales</button><button data-v="orders" aria-pressed="false">Orders</button><button data-v="aov" aria-pressed="false">Avg. order</button></div></div>
+    <div class="shelf" id="shelf"></div>
+  </section>
+
+  <section id="map-sec">
+    <div class="head"><h2>Where it sells</h2>
+      <div class="seg" id="city-mode"><button data-v="sales" aria-pressed="true">Sales</button><button data-v="orders" aria-pressed="false">Orders</button></div></div>
+    <div class="two map-two">
+      <div class="card map-card"><div id="map" class="chart"></div></div>
+      <div class="card"><ol class="rank" id="city-rank"></ol></div>
+    </div>
+  </section>
+
+  <section id="customers">
+    <div class="head"><h2>Orders &amp; customers</h2></div>
+    <div class="two">
+      <div class="card"><div class="card-head"><h3>Order outcomes</h3><span class="muted" id="status-total"></span></div><div id="status"></div></div>
+      <div class="card"><div class="card-head"><h3>Two customer patterns</h3><span class="muted">share of customers vs share of value</span></div><div id="segments"></div></div>
+    </div>
+  </section>
+
+  <details class="method">
+    <summary>Method &amp; sources</summary>
+    <p>Sales use the source <code>Sales</code> field for completed orders only; currency and whether the data are real or synthetic are unconfirmed. Segment shares come from the original clustering output and are descriptive, not causal. This page publishes aggregates only.</p>
+    <p><a href="https://www.kaggle.com/datasets/erfan4524/e-commerce-sales-data-analysis-and-eda/data">Dataset on Kaggle</a> · Icons: <a href="https://lucide.dev">Lucide</a> (ISC) · Map: <a href="https://www.naturalearthdata.com/">Natural Earth</a> (public domain) · <a href="https://github.com/tpootth/iran-it-gadget-store-sales">Source code</a></p>
+  </details>
+</main>
+<footer><span>IRAN GADGET / ANALYTICS PORTFOLIO</span><span>Phuwanat Boonmee</span></footer>
+<div id="tip" role="tooltip"></div>
+<script src="assets.js?v=2"></script>
+<script src="app.js?v=2"></script>
+</body>
+</html>
